@@ -1,32 +1,27 @@
-import styled from 'styled-components'
-import { BsFillRocketFill } from 'react-icons/bs'
+import React, { useState } from 'react'
+import styled from 'styled-components';
+import { GiCandleFlame } from "react-icons/gi";
 
 const Header = () => {
+    const [bar, setBar] = useState(false);
   return (
-    <Container>
-      <Logo>
-        <span>
-          <BsFillRocketFill />
-        </span>
-        <h1>Portfolio</h1>
-      </Logo>
-      <Nav>
-        <span>
-          <a href="#">Home</a>
-        </span>
-        <span>
-          <a href="#">Services</a>
-        </span>
-        <span>
-          <a href="#">Projects</a>
-        </span>
-        <span>
-          <a href="#">Reviews</a>
-        </span>
-        <span>
-          <a href="#">Portfolio</a>
-        </span>
-      </Nav>
+    <Container bar={bar}>
+        <Logo>
+            <span className='green'><GiCandleFlame/></span>
+            <h1>Portfolio</h1>
+        </Logo>
+        <Nav bar={bar}>
+            <span><a href="#home">Home</a></span>
+            <span><a href="#service">Services</a></span>
+            <span><a href="#project">Projects</a></span>
+            <span><a href="#client">Testimonials</a></span>
+            <span><a href="#footer">Portfolio</a></span>
+        </Nav>
+        <div
+        onClick={() => setBar(!bar)}
+        className="bars">
+            <div className="bar"></div>
+        </div>
     </Container>
   )
 }
@@ -34,25 +29,70 @@ const Header = () => {
 export default Header
 
 const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1280px;
-  width: 80%;
-  margin: 0 auto;
-`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1280px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    position: relative;
+    animation: header 500ms ease-in-out;
+    @media(max-width: 840px){
+        width: 90%;
+    }
+    .bars{
+        display: none;
+    }
+    @media(max-width:720px){
+        .bars{
+            width: 40px;
+            height: 40px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem;
+            z-index: 100;
+            .bar{
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: ${props => props.bar ? "transparent" : "#fff"};
+                transition: all 400ms ease-in-out;
+                :before, :after{
+                    content: "";
+                    width: 100%;
+                    height: 2px;
+                    background-color: #fff;
+                    position: absolute;
+                }
 
+                :before{
+                    transform: ${props => props.bar ? "rotate(45deg)" : "translateY(10px)"};
+                    transition: all 400ms ease-in-out;
+                }
+
+                :after{
+                    transform: ${props => props.bar ? "rotate(-45deg)" : "translateY(-10px)"};
+                    transition: all 400ms ease-in-out;
+                }
+            }
+        }
+    }
+`
 const Logo = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  span {
-    font-size: 1.8rem;
-  }
-  h1 {
-    font-weight: 600;
-    font-size: 1.2rem;
-  }
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    span{
+        font-size: 1.8rem;
+    }
+
+    h1{
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
 `
 const Nav = styled.div`
     @media(max-width:640px){
