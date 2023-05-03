@@ -1,6 +1,6 @@
 Hello I'am
-Milad Amiri
-UX/UI Designer And Graphic Designer
+Mario Rodriguez
+Full stack web developer
 
 ## colors
 green : #01be96
