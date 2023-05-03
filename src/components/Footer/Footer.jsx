@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { MdAlternateEmail } from "react-icons/md";
-import { CgProfile } from "react-icons/cg";
+// import { MdAlternateEmail } from "react-icons/md";
+// import { CgProfile } from "react-icons/cg";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { AiFillGithub, AiFillLinkedin, AiOutlineArrowUp } from "react-icons/ai";
 import { BsFacebook, BsSlack } from "react-icons/bs";
 import { FiMail, FiPhoneCall } from "react-icons/fi";
 import { Slide, Zoom, Fade } from "react-awesome-reveal";
+import emailjs from 'emailjs-com';
 
 const Footer = () => {
   const scrollUp = () => {
@@ -14,6 +15,28 @@ const Footer = () => {
       top: 0,
       behavior: "smooth",
     });
+  };
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_v8cqkrc', 'template_flfr2ic', '#myForm')
+      .then((result) => {
+          console.log(result.text);
+          alert("Your message was sent successfully! We'll get back to you as soon as possible.");
+      }, (error) => {
+          console.log(error.text);
+          alert("There was an error sending your message. Please try again later!!!.");
+      });
   };
   return (
     <Container id="footer">
@@ -48,11 +71,11 @@ const Footer = () => {
               </span>
             </Slide>
             <Slide>
-              <a href="mariog.rodriguezm@gmail.com">mariog.rodriguezm@gmail.com</a>
+            <a href="mailto:mariog.rodriguezm@gmail.com">mariog.rodriguezm@gmail.com</a>
             </Slide>
           </div>
         </div>
-        <div className="profiles">
+        {/* <div className="profiles">
           <Slide direction="left">
             <h1>Check my profiles</h1>
           </Slide>
@@ -86,38 +109,39 @@ const Footer = () => {
               </span>
             </Zoom>
           </div>
-        </div>
+        </div> */}
         <Fade>
           <ArrowUp onClick={scrollUp}>
             <AiOutlineArrowUp />
           </ArrowUp>
         </Fade>
       </Profile>
-      <Form>
+      {/* <Form onSubmit={handleSubmit}>
         <Slide direction="right">
           <form>
-            <div className="name">
+            <div className="name"  type="text" name="name" placeholder="Fullname...">
               <span>
                 <CgProfile />
               </span>
-              <input type="text" placeholder="Fullname..." />
+              <input type="text" placeholder="Fullname..." name="name" value={formData.name} onChange={handleChange} />
+
             </div>
             <div className="email">
               <span>
                 <MdAlternateEmail />
               </span>
-              <input type="email" placeholder="Email..." />
+              <input type="email" name="email" placeholder="Email..." />
             </div>
             <div className="message">
               <span className="messageIcon">
                 <FiMail />
               </span>
-              <textarea cols="30" rows="10" placeholder="Message..."></textarea>
+              <textarea name="message" cols="30" rows="10" placeholder="Message..."></textarea>
             </div>
             <button>Submit</button>
           </form>
         </Slide>
-      </Form>
+      </Form> */}
     </Container>
   );
 };
@@ -228,56 +252,56 @@ const ArrowUp = styled.div`
     top: 16rem;
   }
 `;
-const Form = styled.div`
-  flex: 1;
-  h1 {
-    font-size: 1.3rem;
-    padding-bottom: 0.7rem;
-  }
+// const Form = styled.div`
+//   flex: 1;
+//   h1 {
+//     font-size: 1.3rem;
+//     padding-bottom: 0.7rem;
+//   }
 
-  form {
-    background-color: #191923;
-    padding: 0.8rem;
-    border-radius: 5px;
-    .name,
-    .email,
-    .message {
-      display: flex;
-      border: 1px solid gray;
-      margin-bottom: 0.5rem;
-      input,
-      textarea {
-        width: 100%;
-        border: none;
-        outline: none;
-        color: #fff;
-        background-color: transparent;
-        padding: 1rem 0.5rem;
-      }
-      span {
-        background-color: #3e3e3e;
-        width: 3rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .messageIcon {
-        align-items: flex-start;
-        padding-top: 0.5rem;
-      }
-    }
+//   form {
+//     background-color: #191923;
+//     padding: 0.8rem;
+//     border-radius: 5px;
+//     .name,
+//     .email,
+//     .message {
+//       display: flex;
+//       border: 1px solid gray;
+//       margin-bottom: 0.5rem;
+//       input,
+//       textarea {
+//         width: 100%;
+//         border: none;
+//         outline: none;
+//         color: #fff;
+//         background-color: transparent;
+//         padding: 1rem 0.5rem;
+//       }
+//       span {
+//         background-color: #3e3e3e;
+//         width: 3rem;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//       }
+//       .messageIcon {
+//         align-items: flex-start;
+//         padding-top: 0.5rem;
+//       }
+//     }
 
-    button {
-      width: 5rem;
-      height: 1.8rem;
-      background-color: #01be96;
-      border: none;
-      border-radius: 5px;
-      filter: drop-shadow(0px 4px 5px #01be9551);
-      cursor: pointer;
-      :hover {
-        filter: drop-shadow(0px 6px 9px #01be9551);
-      }
-    }
-  }
-`;
+//     button {
+//       width: 5rem;
+//       height: 1.8rem;
+//       background-color: #01be96;
+//       border: none;
+//       border-radius: 5px;
+//       filter: drop-shadow(0px 4px 5px #01be9551);
+//       cursor: pointer;
+//       :hover {
+//         filter: drop-shadow(0px 6px 9px #01be9551);
+//       }
+//     }
+//   }
+// `;

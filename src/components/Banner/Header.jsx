@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import styled from 'styled-components';
-import { GiCandleFlame } from "react-icons/gi";
+import { FaCode } from "react-icons/fa";
 
 const Header = () => {
     const [bar, setBar] = useState(false);
   return (
     <Container bar={bar}>
         <Logo>
-            <span className='green'><GiCandleFlame/></span>
+            <span className='green'><FaCode/></span>
             <h1>Portfolio</h1>
         </Logo>
         <Nav bar={bar}>

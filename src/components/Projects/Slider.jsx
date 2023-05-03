@@ -6,25 +6,25 @@ import styled from 'styled-components';
 
 let data = [
     {
-        img : "https://res.cloudinary.com/ghazni/image/upload/v1661324124/Yt-portfolio/ui5_mnvdaw.png",
-        disc : "Lorem ipsum dolor sit amet consectetur adipisicing elit.Eveniet iure rerum obcaecati et laborum earum!"
+        img : "https://res.cloudinary.com/dsevu38bc/image/upload/v1683112131/mobile_2_ky3oa9.png",
+        disc : "Online game, including HTML, CSS, JavaScript, and image files, as well as the functions used in the main script.js file to set up and run the game."
     },
     {
-        img : "https://res.cloudinary.com/ghazni/image/upload/v1661324074/Yt-portfolio/ui4_jku3ol.png",
-        disc : "Lorem ipsum dolor sit amet consectetur adipisicing elit.Eveniet iure rerum obcaecati et laborum earum!"
+        img : "https://res.cloudinary.com/dsevu38bc/image/upload/v1683112131/mobile_1_keynjl.png",
+        disc : "This is a web app built with Node.js and Express that uses technologies such as bcryptjs, cloudinary, and mongoose for authentication, image storage, and database management."
     },
     {
-        img : "https://res.cloudinary.com/ghazni/image/upload/v1661323981/Yt-portfolio/ui2_wtollo.png",
-        disc : "Lorem ipsum dolor sit amet consectetur adipisicing elit.Eveniet iure rerum obcaecati et laborum earum!"
+        img : "https://res.cloudinary.com/dsevu38bc/image/upload/v1683111886/mobile_o1fc9b.png",
+        disc : "This is a MERN stack project  designed exclusively for mobile screen sizes. It includes features such as database management, server-side and client-side rendering, and frontend components for user interaction."
     },
-    {
-        img : "https://res.cloudinary.com/ghazni/image/upload/v1661323980/Yt-portfolio/ui3_akynn4.png",
-        disc : "Lorem ipsum dolor sit amet consectetur adipisicing elit.Eveniet iure rerum obcaecati et laborum earum!"
-    },
-    {
-        img : "https://res.cloudinary.com/ghazni/image/upload/v1661323979/Yt-portfolio/ui1_n3uiaz.png",
-        disc : "Lorem ipsum dolor sit amet consectetur adipisicing elit.Eveniet iure rerum obcaecati et laborum earum!"
-    }
+    // {
+    //     img : "https://res.cloudinary.com/ghazni/image/upload/v1661323980/Yt-portfolio/ui3_akynn4.png",
+    //     disc : "Lorem ipsum dolor sit amet consectetur adipisicing elit.Eveniet iure rerum obcaecati et laborum earum!"
+    // },
+    // {
+    //     img : "https://res.cloudinary.com/ghazni/image/upload/v1661323979/Yt-portfolio/ui1_n3uiaz.png",
+    //     disc : "Lorem ipsum dolor sit amet consectetur adipisicing elit.Eveniet iure rerum obcaecati et laborum earum!"
+    // }
 ];
 
 var settings = {
