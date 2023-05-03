@@ -17,8 +17,8 @@ function App() {
         <Projects />
       </LightColor>
       {/* <Clients /> */}
-        <Footer />
       <LightColor>
+        <Footer />
       </LightColor>
     </Container>
   );
