@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 // import { MdAlternateEmail } from "react-icons/md";
 // import { CgProfile } from "react-icons/cg";
 import { HiOutlineMailOpen } from "react-icons/hi";
-import { AiFillGithub, AiFillLinkedin, AiOutlineArrowUp } from "react-icons/ai";
-import { BsFacebook, BsSlack } from "react-icons/bs";
-import { FiMail, FiPhoneCall } from "react-icons/fi";
-import { Slide, Zoom, Fade } from "react-awesome-reveal";
-import emailjs from 'emailjs-com';
+import {  AiOutlineArrowUp } from "react-icons/ai";
+// import { BsFacebook, BsSlack } from "react-icons/bs";
+import { FiPhoneCall } from "react-icons/fi";
+import { Slide, Fade } from "react-awesome-reveal";
+// import emailjs from 'emailjs-com';
 
 const Footer = () => {
   const scrollUp = () => {
@@ -16,28 +16,28 @@ const Footer = () => {
       behavior: "smooth",
     });
   };
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   email: "",
+  //   message: "",
+  // });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  // const handleChange = (e) => {
+  //   setFormData({ ...formData, [e.target.name]: e.target.value });
+  // };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
 
-    emailjs.sendForm('service_v8cqkrc', 'template_flfr2ic', '#myForm')
-      .then((result) => {
-          console.log(result.text);
-          alert("Your message was sent successfully! We'll get back to you as soon as possible.");
-      }, (error) => {
-          console.log(error.text);
-          alert("There was an error sending your message. Please try again later!!!.");
-      });
-  };
+  //   emailjs.sendForm('service_v8cqkrc', 'template_flfr2ic', '#myForm')
+  //     .then((result) => {
+  //         console.log(result.text);
+  //         alert("Your message was sent successfully! We'll get back to you as soon as possible.");
+  //     }, (error) => {
+  //         console.log(error.text);
+  //         alert("There was an error sending your message. Please try again later!!!.");
+  //     });
+  // };
   return (
     <Container id="footer">
       <Profile  id="contact-section">
@@ -75,7 +75,7 @@ const Footer = () => {
             </Slide>
           </div>
         </div>
-        <div className="profiles">
+        {/* <div className="profiles">
           <Slide direction="left">
             <h1>Check my profiles</h1>
           </Slide>
@@ -109,7 +109,7 @@ const Footer = () => {
               </span>
             </Zoom>
           </div>
-        </div>
+        </div> */}
         <Fade>
           <ArrowUp onClick={scrollUp}>
             <AiOutlineArrowUp />
