@@ -30,7 +30,7 @@ const Container = styled.div``;
 const Banner = styled.div`
   background: linear-gradient(159deg, rgb(45, 45, 58, .5) 0%, rgb(43, 43, 53, .5) 100%);
   height: 100vh;
-  padding-bottom:50rem;
+  padding-bottom:55rem;
   @media (max-width: 720px) {
     height: 100%;
     padding-bottom: 2rem;

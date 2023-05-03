@@ -12,14 +12,14 @@ const ProfComponent = () => {
       <Slide direction="left">
         <Texts>
           <h4>
-            Hello <span className="green">I'am</span>
+            Hello <span className="green">I'm</span>
           </h4>
           <h1 className="green">Mario Rodríguez</h1>
-          <h3>Junior Full Stack Web Developer | Express | ReactJS | JavaScript (ES6) | HTML | CSS | MongoDB | Git | Node.js</h3>
-          <p>I'm Mario Rodriguez, a Junior Full Stack Web Developer with experience in graphic design. My technical skills include JavaScript, ReactJs, HTML 5, CSS 3, Bootstrap, NodeJs, MongoDB, ExpressJs, and Handlebars. I have worked on coding projects such as Champ Car World Series, JAM session, and SpliTrip. I possess soft skills such as communication, teamwork, problem-solving, stress management, leadership, and adaptability. Furthermore, I speak both Spanish and English fluently.
+          <h3>Junior Full Stack Web Developer </h3>
+          <h4>Express | ReactJS | JavaScript (ES6) | HTML | CSS | MongoDB | Git | Node.js</h4>
+          <p>I'm Mario Rodriguez, a Junior Full Stack Web Developer with experience in graphic design. My technical skills include JavaScript, ReactJs, HTML 5, CSS 3, Bootstrap, NodeJs, MongoDB, ExpressJs, and Handlebars. I have worked on coding projects such as Champ Car World Series, JAM session, and SpliTrip. I possess soft skills such as communication, teamwork, problem-solving, stress management, leadership, and adaptability. Furthermore, I speak both Spanish and English fluently. </p>
 <br />
-<br />
-I completed a Full Stack Web Development course at Ironhack and a QA Manual Tester course at Coderhouse. Additionally, I have professional experience as a Freelance Graphic Web Designer, Backup Supervisor, QA Manual Tester & Web Designer, and Customer Service and Technical Support Advisor. I'm passionate about learning and aspire to become a Senior Full Stack Web Developer.
+<p>I completed a Full Stack Web Development course at Ironhack and a QA Manual Tester course at Coderhouse. Additionally, I have professional experience as a Freelance Graphic Web Designer, Backup Supervisor, QA Manual Tester & Web Designer, and Customer Service & Technical Support Advisor. I'm passionate about learning and aspire to become a Senior Full Stack Web Developer.
           </p>
           <button><a href="#contact-section">Let's talk</a></button>
           <Social>

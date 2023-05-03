@@ -14,7 +14,7 @@ const Header = () => {
             <span><a href="#home">Home</a></span>
             <span><a href="#service">Services</a></span>
             <span><a href="#project">Projects</a></span>
-            <span><a href="#client">Testimonials</a></span>
+            {/* <span><a href="#client">Testimonials</a></span> */}
             <span><a href="#footer">Contact</a></span>
         </Nav>
         <div
@@ -106,7 +106,7 @@ const Nav = styled.div`
         font-size: 2rem;
         gap: 2rem;
         font-weight: 700;
-        height: ${props => props.bar ? "100vh" : 0};
+        height: ${props => props.bar ? "50vh" : 0};
         transition: height 400ms ease-in-out;
         overflow: hidden;
         z-index: 100;
