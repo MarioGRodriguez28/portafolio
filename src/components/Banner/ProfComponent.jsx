@@ -52,7 +52,7 @@ I completed a Full Stack Web Development course at Ironhack and a QA Manual Test
       <Slide direction="right">
         <Profile>
           <img
-            src="https://res.cloudinary.com/ghazni/image/upload/v1659082282/Yt-portfolio/Untitled-1_drcspz.png"
+            src="https://res.cloudinary.com/dsevu38bc/image/upload/v1683114142/IMG-20230501-WA0029_mzhv72.jpg"
             alt="profile"
           />
         </Profile>
