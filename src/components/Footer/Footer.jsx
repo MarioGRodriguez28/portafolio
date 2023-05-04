@@ -238,7 +238,7 @@ const Profile = styled.div`
 const ArrowUp = styled.div`
   width: 2rem;
   height: 2rem;
-  background-color: #01be96;
+  background-color:  #e14040;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -246,10 +246,10 @@ const ArrowUp = styled.div`
   font-size: 1.3rem;
   font-weight: 700;
   margin-top: 2rem;
+    position: fixed;
   @media (max-width: 650px) {
-    position: absolute;
-    right: 3rem;
-    top: 16rem;
+    right: 1rem;
+    bottom: 5rem;
   }
 `;
 // const Form = styled.div`

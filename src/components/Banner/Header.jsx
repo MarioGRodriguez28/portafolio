@@ -1,31 +1,33 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { FaCode } from "react-icons/fa";
 
 const Header = () => {
     const [bar, setBar] = useState(false);
-  return (
-    <Container bar={bar}>
-        <Logo>
-            <span className='green'><FaCode/></span>
-            <h1>Portfolio</h1>
-        </Logo>
-        <Nav bar={bar}>
-            <span><a href="#home">Home</a></span>
-            <span><a href="#service">Services</a></span>
-            <span><a href="#project">Projects</a></span>
-            {/* <span><a href="#client">Testimonials</a></span> */}
-            <span><a href="#footer">Contact</a></span>
-        </Nav>
-        <div
-        onClick={() => setBar(!bar)}
-        className="bars">
-            <div className="bar"></div>
-        </div>
-    </Container>
-  )
-}
 
+    const handleClick = () => {
+        setBar(false);
+    };
+
+    return (
+        <Container bar={bar}>
+            <Logo>
+                <span className='green'><FaCode/></span>
+                <h1>Portfolio</h1>
+            </Logo>
+            <Nav bar={bar}>
+                <span><a href="#home" onClick={handleClick}>Home</a></span>
+                <span><a href="#service" onClick={handleClick}>Services</a></span>
+                <span><a href="#project" onClick={handleClick}>Projects</a></span>
+                {/* <span><a href="#client">Testimonials</a></span> */}
+                <span><a href="#footer" onClick={handleClick}>Contact</a></span>
+            </Nav>
+            <div onClick={() => setBar(!bar)} className="bars">
+                <div className="bar"></div>
+            </div>
+        </Container>
+    );
+};
 export default Header
 
 const Container = styled.div`

@@ -23,7 +23,7 @@ const ProfComponent = () => {
           </p>
           <button><a href="#contact-section">Let's talk</a></button>
           <Social>
-            <p>Check out my</p>
+            <h4>Check out my</h4>
             <div className="social-icons">
               <span>
                 <a href="https://github.com/MarioGRodriguez28">
@@ -52,7 +52,7 @@ const ProfComponent = () => {
       <Slide direction="right">
         <Profile>
           <img
-            src="https://res.cloudinary.com/dsevu38bc/image/upload/v1683114142/IMG-20230501-WA0029_mzhv72.jpg"
+            src="https://res.cloudinary.com/dsevu38bc/image/upload/v1683154796/IMG-20230501-WA0029_mzhv72.jpg"
             alt="profile"
           />
         </Profile>
@@ -98,6 +98,7 @@ const Texts = styled.div`
   }
   p {
     font-weight: 300;
+    font-size:0.75rem;
   }
   button a {
     color: white;
@@ -105,18 +106,19 @@ const Texts = styled.div`
   }
 
   button {
-    padding: 0.7rem 2rem;
-    margin-top: 3rem;
-    cursor: pointer;
-    background-color: #01be96;
-    border: none;
-    color: #fff;
-    font-weight: 500;
-    filter: drop-shadow(0px 10px 10px #01be9551);
-    :hover {
-      filter: drop-shadow(0px 10px 10px #01be9570);
-    }
-  }
+  padding: 0.7rem 2rem;
+  margin-top: 3rem;
+  cursor: pointer;
+  background-color: #e14040;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.3));
+}
+
+button:hover {
+  filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.5));
+}
 `;
 const Social = styled.div`
   margin-top: 3rem;
@@ -138,7 +140,7 @@ const Social = styled.div`
       width: 2.3rem;
       height: 2rem;
       clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-      background-color: #01be96;
+      background-color: #e14040;
       position: relative;
       transition: transform 400ms ease-in-out;
       :hover {
@@ -158,7 +160,7 @@ const Social = styled.div`
 const Profile = styled.div`
   img {
     width: 25rem;
-    filter: drop-shadow(0px 10px 10px #01be9570);
+    filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.3));
     transition: transform 400ms ease-in-out;
     @media (max-width: 790px) {
       width: 20rem;
