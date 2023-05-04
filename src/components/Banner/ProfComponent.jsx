@@ -11,16 +11,16 @@ const ProfComponent = () => {
     <Container id="home">
       <Slide direction="left">
         <Texts>
-          <h4>
-            Hello <span className="green">I'm</span>
-          </h4>
+          <h4>Hello I'm</h4>
           <h1 className="green">Mario Rodríguez</h1>
           <h3>Junior Full Stack Web Developer </h3>
           <h4>Express | ReactJS | JavaScript (ES6) | HTML | CSS | MongoDB | Git | Node.js</h4>
-          <p>I'm Mario Rodriguez, a Junior Full Stack Web Developer with experience in graphic design. My technical skills include JavaScript, ReactJs, HTML 5, CSS 3, Bootstrap, NodeJs, MongoDB, ExpressJs, and Handlebars. I have worked on coding projects such as Champ Car World Series, JAM session, and SpliTrip. I possess soft skills such as communication, teamwork, problem-solving, stress management, leadership, and adaptability. Furthermore, I speak both Spanish and English fluently. </p>
+          <br />
+          <p>With extensive experience in graphic design, I possess a diverse range of technical skills including JavaScript, ReactJs, HTML 5, CSS 3, Bootstrap, NodeJs, MongoDB, ExpressJs, and Handlebars. I have successfully completed coding projects such as Champ Car World Series, JAM session, and SpliTrip. In addition to my technical expertise, I possess strong soft skills such as effective communication, teamwork, problem-solving, stress management, leadership, and adaptability. Additionally, I am fluent in both Spanish and English </p>
 <br />
-<p>I completed a Full Stack Web Development course at Ironhack and a QA Manual Tester course at Coderhouse. Additionally, I have professional experience as a Freelance Graphic Web Designer, Backup Supervisor, QA Manual Tester & Web Designer, and Customer Service & Technical Support Advisor. I'm passionate about learning and aspire to become a Senior Full Stack Web Developer.
-          </p>
+<p>To further enhance my skills, I completed a Full Stack Web Development course at Ironhack and a QA Manual Tester course at Coderhouse. With a professional background as a Freelance Graphic Web Designer, Backup Supervisor, QA Manual Tester & Web Designer, and Customer Service & Technical Support Advisor, I have gained practical experience in the field.</p>
+<br />
+<p>As a passionate learner, I aspire to become a Senior Full Stack Web Developer and constantly strive to learn and grow in my field.</p>
           <button><a href="#contact-section">Let's talk</a></button>
           <Social>
             <h4>Check out my</h4>
@@ -82,7 +82,7 @@ const Container = styled.div`
 const Texts = styled.div`
   flex: 1;
   h4 {
-    padding: 1rem 0;
+    padding: 0rem 0;
     font-weight: 500;
   }
   h1 {
@@ -95,6 +95,7 @@ const Texts = styled.div`
     font-size: 1.2rem;
     padding-bottom: 1.2rem;
     text-transform: capitalize;
+    just
   }
   p {
     font-weight: 300;

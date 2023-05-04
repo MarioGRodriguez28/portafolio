@@ -101,14 +101,14 @@ const Nav = styled.div`
         position: fixed;
         display: flex;
         flex-direction: column;
-        background-color: #01be96;
+        background-image: linear-gradient(to bottom, rgba(225,64,64,1), rgba(225,64,64,0));
         inset: 0;
         justify-content: center;
         align-items: center;
-        font-size: 2rem;
-        gap: 2rem;
+        font-size: 1rem;
+        gap: 1rem;
         font-weight: 700;
-        height: ${props => props.bar ? "50vh" : 0};
+        height: ${props => props.bar ? "20vh" : 0};
         transition: height 400ms ease-in-out;
         overflow: hidden;
         z-index: 100;
