@@ -3,13 +3,19 @@ import { render, screen } from '@testing-library/react';
 import Header from './Header';
 
 test('renders logo text', () => {
-  const { getByText } = render(<Header />);
+  // Renders the Header component
+  render(<Header />);
+  
+  // Verify that the text "portfolio" is present in the document
   const logoText = screen.getByText(/portfolio/i);
   expect(logoText).toBeInTheDocument();
 });
 
 test('renders navigation links', () => {
-  const { getByText } = render(<Header />);
+  // Renders the Header component
+  render(<Header />);
+  
+  // Verify that navigation links are present in the document
   const homeLink = screen.getByText(/home/i);
   const servicesLink = screen.getByText(/services/i);
   const projectsLink = screen.getByText(/projects/i);
@@ -20,5 +26,3 @@ test('renders navigation links', () => {
   expect(projectsLink).toBeInTheDocument();
   expect(contactLink).toBeInTheDocument();
 });
-
-
